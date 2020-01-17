@@ -82,7 +82,7 @@ public class Livro {
                 ", editora=" + editora.getEndereco() +
                 ", paginaAtual=" + paginaAtual +
                 ", anoPublicacao=" + anoPublicacao +
-                ", aberto=" + false +
+                ", aberto=" + aberto +
                 '}';
     }
 
@@ -95,6 +95,9 @@ public class Livro {
         if(this.aberto == true) {
             this.aberto = false;
             System.out.println("Livro Fechado");
+        }
+        else {
+            System.out.println("Abra o livro para fecha-lo kkkkk");
         }
     }
 
@@ -113,9 +116,14 @@ public class Livro {
 
     }
 
-    public int proximaPagina(int paginaAtual){
-        this.paginaAtual = paginaAtual + 1;
-        return this.paginaAtual;
+    public void proximaPagina(int paginaAtual){
+        if(this.aberto = true){
+            this.paginaAtual = paginaAtual + 1;
+            System.out.println(this.paginaAtual);
+        }
+        else {
+            System.out.println("Precisa abrir o livro");
+        }
     }
 
 }
